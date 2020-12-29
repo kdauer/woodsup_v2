@@ -1,12 +1,14 @@
-import Link from 'next/link'
-import Header from '../components/header.js'
+import styles from '../styles/home.module.sass'
 
-function Home() {
-  return (
-    <div className="Home">
-    <Header/>
-  </div>
-  )
-}
+const Homepage = () => (
+  <>
+    <main >
+      <div className={styles.welcome}>
+      
+</div>
+    </main>
+  </>
+)
 
-export default Home
+
+export default Homepage

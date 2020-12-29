@@ -1,25 +1,19 @@
 import Link from 'next/link'
-import styles from './navbar.module.sass'
+import { withTranslation } from '../i18n'
 
-function Navbar () {
+import styles from '../styles/navbar.module.sass'
+
+const Navbar = ({t}) => {
     return (
         <div className={styles.nav}>
-      {/* <input type="checkbox" id="nav-check" />
-      <div className={styles.navBtn}>
-        <label htmlFor="nav-check">
-          <span className={styles.line1}></span>
-          <span className={styles.line2}></span>
-          <span className={styles.line3}></span>
-        </label>
-      </div> */}
       <div className={styles.navLinks}>
-        <Link href="/about">Über Uns</Link>
-        <Link href="/projects">Projekte</Link>
-        <Link href="/support">Unterstützung</Link>
-        <Link href="/links">Motivation</Link>
+        <Link href="/about">{t('about')}</Link>
+        <Link href="/projects">{t('projects')}</Link>
+        <Link href="/support">{t('support')}</Link>
+        <Link href="/links">{t('motivation')}</Link>
       </div>
     </div>
     )
 }
 
-export default Navbar;
+export default withTranslation('common')(Navbar)
