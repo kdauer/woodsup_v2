@@ -6,14 +6,12 @@ import styles from '../styles/footer.module.sass'
 const Footer = ({t}) => {
     return (
 <div className={styles.footer}>      
-      <p>
-        Copyright © 2020 Woods Up e.V.{' '}
-        <div className="foot-infos">
+       <p>Copyright © 2020 Woods Up e.V.</p> 
+        <div >
         <Link href="/privacypolicy">{t('privacypolicy')}</Link>
         <Link href="/legalnotice">{t('legalnotice')}</Link>
         <Link href="/contact">{t('contact')}</Link>
         </div>
-      </p>
       </div>
     )
 }
