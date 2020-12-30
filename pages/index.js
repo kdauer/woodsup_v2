@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types'
+import { withTranslation } from '../i18n'
 import styles from '../styles/home.module.sass'
 
-const Homepage = () => (
+const Homepage = ({t}) => (
   <>
     <main >
       <div className={styles.welcome}>
@@ -10,5 +12,12 @@ const Homepage = () => (
   </>
 )
 
+Homepage.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
 
-export default Homepage
+Homepage.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+
+export default withTranslation('common')(Homepage)
