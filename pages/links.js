@@ -11,7 +11,7 @@ const Motivation = ({t}) => {
         <div className={styles.space}>
         <ul className={styles.motivation}>
         {linklist.links.map((link) => (
-        <li><a href={link.href}>{link.title}</a></li>
+        <li key={link.id}><a href={link.href}>{link.title}</a></li>
       ))}
         </ul>
       </div>

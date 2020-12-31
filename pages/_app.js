@@ -1,15 +1,20 @@
 import App from 'next/app'
+import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import '../styles/styles.sass'
 import { appWithTranslation } from '../i18n'
 
 const MyApp = ({ Component, pageProps }) => {
-  return <div>
+  console.log("WoodsUp e.v. from Potsdam with <3")
+  return <>
+  <Head>
+  <title>WoodsUp e.V.</title>
+  </Head>
   <Header/>
   <Component {...pageProps} />
   <Footer/>
-  </div>
+  </>
 }
 
 MyApp.getInitialProps = async (appContext) => {
