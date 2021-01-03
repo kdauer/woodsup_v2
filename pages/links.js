@@ -3,14 +3,14 @@ import { withTranslation } from '../i18n'
 import styles from '../styles/links.module.sass'
 import links from '../resources/links.json'
 
-const linklist = links;
+const linklist = links.links;
 
 const Motivation = ({t}) => {
     return (
         <div className={styles.home}>
         <div className={styles.space}>
         <ul className={styles.motivation}>
-        {linklist.links.map((link) => (
+        {linklist.map((link) => (
         <li key={link.id}><a href={link.href}>{link.title}</a></li>
       ))}
         </ul>

@@ -1,10 +1,10 @@
 {
-    "projects":
-    [
+    "projects":[
         {
             "id":"1",
             "image":"/IMG_3024.JPG",
-            "title":"Radtour mit Baumpflanzaktion in Kooperation mit XR und FFF im August 2019 in Potsdam, Brandenburg und Krielow","content":"am 10. August 2019 Fahrradtour mit Baumpflanzaktion in Potsdam, Brandenburg und Krielow in Kooperation mit Extinction Rebellion und Fridays for Future.",
+            "title":"Radtour mit Baumpflanzaktion in Kooperation mit XR und FFF im August 2019 in Potsdam, Brandenburg und Krielow",
+            "content":"am 10. August 2019 Fahrradtour mit Baumpflanzaktion in Potsdam, Brandenburg und Krielow in Kooperation mit Extinction Rebellion und Fridays for Future.",
             "video":"",
             "presslinks":"",
             "gallery":""
@@ -13,7 +13,8 @@
             "id":"2",
             "image":"/IMG_3011.JPG",
             "title":"Island im Juni 2020: Anlage eines Klimawaldes mit 2500 Setzlingen verschiedener Baumarten",
-            "content":"","video":"https://www.youtube.com/watch?v=9uYkBS9e6p4",
+            "content":"",
+            "video":"https://www.youtube.com/watch?v=9uYkBS9e6p4",
             "presslinks":"",
             "gallery":""
         },
@@ -66,7 +67,8 @@
             "id":"8",
             "image":"/IMG_3733.JPG",
             "title":"Kagendorf im Oktober 2020: Pflanzung von 86 Bäumen (überwiegend alte Obstsorten)",
-            "content":"","video":"https://www.youtube.com/watch?v=18hwpjtG9aA",
+            "content":"",
+            "video":"https://www.youtube.com/watch?v=18hwpjtG9aA",
             "presslinks":"",
             "gallery":""
         },
@@ -74,7 +76,8 @@
             "id":"9",
             "image":"/IMG_2855.JPG",
             "title":"Oktober 2020: Anlage eines Mischwäldchens in Wollin",
-            "content":"","video":"https://www.youtube.com/watch?v=_JBaScELrFI",
+            "content":"",
+            "video":"https://www.youtube.com/watch?v=_JBaScELrFI",
             "presslinks":"",
             "gallery":""
             }

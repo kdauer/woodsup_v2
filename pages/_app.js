@@ -6,6 +6,7 @@ import '../styles/styles.sass'
 import { appWithTranslation } from '../i18n'
 
 const MyApp = ({ Component, pageProps }) => {
+  console.log("WoodsUp e.v. - from Potsdam with <3");
   return <>
   <Head>
   <title>WoodsUp e.V.</title>
