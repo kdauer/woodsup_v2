@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import { withTranslation } from '../i18n'
+import { withTranslation } from '../../i18n'
 import styles from '../styles/projectdetail.module.sass'
-import Projects from '../../resources/projects.json'
+import Projects from '../../data/projects.json'
 
 const Project = ({ project }) => {
     // Render post...

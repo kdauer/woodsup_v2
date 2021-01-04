@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { withTranslation } from '../i18n'
 import styles from '../styles/links.module.sass'
-import links from '../resources/links.json'
+import links from '../data/links.json'
 
 const linklist = links.links;
 
