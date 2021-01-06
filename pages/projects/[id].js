@@ -1,10 +1,19 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
-import styles from '../styles/projectdetail.module.sass'
-import Projects from '../../data/projects.json'
+import { useRouter } from 'next/router'
+import styles from '../../styles/projectdetail.module.sass'
+import projects from '../../data/projects.json'
 
-const Project = ({ project }) => {
-    // Render post...
+const projectsList = projects.projects;
+
+const Project = () => {
+    const router = useRouter()
+    const { pid } = router.query
+    console.log("pid",pid)
+
+    // const { params } = projectsList.match;
+    const project = projectsList.find(el => {
+    return el.id === pid;
+  });
+
     if (!project) {
         return <div>Loading</div>;
       }
@@ -32,19 +41,5 @@ const Project = ({ project }) => {
           )}
         </div>
       );
-  }
-  
-  export async function getStaticPaths() {
-    // Call an external API endpoint to get posts
-    
-    const projects = Projects
-  
-    // Get the paths we want to pre-render based on posts
-    const paths = projects.map((project) => `/posts/${project.id}`)
-  
-    // We'll pre-render only these paths at build time.
-    // { fallback: false } means other routes should 404.
-    return { paths, fallback: false }
-  }
-  
-  export default Project
+}
+export default Project;
