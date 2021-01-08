@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/projectdetail.module.sass'
-import projects from '../../data/projects.json'
+import projects from '../../data/projects_de.json'
 
 const projectsList = projects.projects;
 

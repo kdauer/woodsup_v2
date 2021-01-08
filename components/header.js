@@ -5,6 +5,10 @@ import { i18n, withTranslation } from '../i18n'
 import styles from '../styles/header.module.sass'
 
 const Header = ({t}) => {
+  const changeLang = (event) => {
+    i18n.changeLanguage(event.currentTarget.value)
+  }
+
   return (
     <div className={styles.navImg}>
     <h1 className={styles.logo}>
@@ -14,12 +18,17 @@ const Header = ({t}) => {
     </h1>
     <Navbar />
     <div className={styles.langContainer}>
-      <button
+    <select name="language" id="language" onChange={changeLang}>
+      <option value="de">🇩🇪</option>
+      <option value="en">🇬🇧</option>
+      <option value="es">🇪🇸</option>
+    </select>
+      {/* <button
           type='button'
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
         >
           {t('change-locale')}
-        </button>
+        </button> */}
 </div>
   </div>
   )

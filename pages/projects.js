@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../styles/projects.module.sass'
-import projects from '../data/projects.json'
+import projects from '../data/projects_de.json'
 
 const projectsList = projects.projects;
 const sortedList = projectsList.sort((a, b) => b.id - a.id)
