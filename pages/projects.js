@@ -1,12 +1,30 @@
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../styles/projects.module.sass'
-import projects from '../data/projects_de.json'
+import projects_de from '../data/projects_de.json'
+import { i18n, withTranslation } from '../i18n'
 
-const projectsList = projects.projects;
+import projects_en from '../data/projects_en.json'
+import projects_es from '../data/projects_es.json'
+
+let projectsList = projects_de.projects
+let lang = i18n.language
+console.log("language")
+if (lang === 'de') {
+  projectsList = projects_de.projects;
+}
+else if (lang === 'en') {
+  projectsList = projects_en.projects;
+}
+else if (lang === 'es') {
+  projectsList = projects_es.projects;
+
+}
+
+// const projectsList = projects_de.projects;
 const sortedList = projectsList.sort((a, b) => b.id - a.id)
-console.log(sortedList)
-const Projects = (props) => {
+const Projects = ({t,props}) => {
   const router = useRouter()
 
   return (
@@ -52,4 +70,11 @@ const Projects = (props) => {
 )
 }
 
-export default Projects
+Projects.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+Projects.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+export default withTranslation('common')(Projects)

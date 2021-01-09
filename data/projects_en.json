@@ -1,0 +1,85 @@
+{
+    "projects":[
+        {
+            "id":"1",
+            "image":"../Baumpflanzungen.jpg",
+            "title":"Since 2018 regular individual tree planting",
+            "content":"",
+            "video":"",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"2",
+            "image":"../IMG_3023.JPG",
+            "title":"Practical measure for climate protection, tree planting in front of the Brandenburg State Parliament in Potsdam on June 21, 2019.",
+            "content":"Planting of three giant sequoia trees in front of the Brandenburg State Parliament in Potsdam as a practical measure for climate protection",
+            "video":"https://www.youtube.com/watch?v=flGM9suNzWw",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"3",
+            "image":"../IMG_3024.JPG",
+            "title":"Bike tour with tree planting action in cooperation with XR and FFF in August 2019 in Potsdam, Brandenburg and Krielow.",
+            "content":"on August 10, 2019 bike tour with tree planting action in Potsdam, Brandenburg and Krielow in cooperation with Extinction Rebellion and Fridays for Future.",
+            "video":"",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"4",
+            "image":"../IMG_3025.JPG",
+            "title":"Planting on the banks of the Nuthe in Saarmund in May 2019",
+            "content":"",
+            "video":"",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"5",
+            "image":"../IMG_3014.JPG",
+            "title":"Participation in reforestation action of the association 'Land und Mehr Projekt-Initiative' in Gömnigk on December 14, 2019.",
+            "content":"",
+            "video":"",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"6",
+            "image":"../IMG_3021.JPG",
+            "title":"Tree planting in the project 'Rio Mira' Portugal February 2020",
+            "content":"",
+            "video":"",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"7",
+            "image":"../IMG_3011.JPG",
+            "title":"Iceland in June 2020: establishment of a climate forest with 2500 seedlings of different tree species",
+            "content":"",
+            "video":"https://www.youtube.com/watch?v=9uYkBS9e6p4",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"8",
+            "image":"../IMG_3733.JPG",
+            "title":"Kagendorf in October 2020: Planting of 86 trees (mainly old fruit varieties).",
+            "content":"",
+            "video":"https://www.youtube.com/watch?v=18hwpjtG9aA",
+            "presslinks":"",
+            "gallery":""
+        },
+        {
+            "id":"9",
+            "image":"../IMG_2855.JPG",
+            "title":"October 2020: planting a mixed woodland in Wollin",
+            "content":"",
+            "video":"https://www.youtube.com/watch?v=_JBaScELrFI",
+            "presslinks":"",
+            "gallery":""
+            }
+        ]
+}

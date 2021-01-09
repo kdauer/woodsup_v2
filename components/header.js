@@ -18,7 +18,7 @@ const Header = ({t}) => {
     </h1>
     <Navbar />
     <div className={styles.langContainer}>
-    <select name="language" id="language" onChange={changeLang}>
+    <select name="language" id="language" onChange={changeLang} selected>
       <option value="de">🇩🇪</option>
       <option value="en">🇬🇧</option>
       <option value="es">🇪🇸</option>

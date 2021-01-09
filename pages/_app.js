@@ -6,7 +6,7 @@ import '../styles/styles.sass'
 import { appWithTranslation } from '../i18n'
 
 const MyApp = ({ Component, pageProps }) => {
-  console.log("WoodsUp e.v. - from Potsdam with <3");
+  console.log("WoodsUp e.v. - from Potsdam with ❤");
   return <>
   <Head>
   <meta charset="utf-8"/>
