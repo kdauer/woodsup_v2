@@ -8,22 +8,24 @@ import { i18n, withTranslation } from '../i18n'
 import projects_en from '../data/projects_en.json'
 import projects_es from '../data/projects_es.json'
 
+const getCurrentLng = () => i18n.language || '';
+
 let projectsList = projects_de.projects
-let lang = i18n.language
-console.log("language")
-if (lang === 'de') {
-  projectsList = projects_de.projects;
-}
-else if (lang === 'en') {
-  projectsList = projects_en.projects;
-}
-else if (lang === 'es') {
-  projectsList = projects_es.projects;
 
-}
+  if (getCurrentLng() === 'de') {
+    projectsList = projects_de.projects;
+  }
+  if (getCurrentLng() === 'en') {
+    projectsList = projects_en.projects;
+  }
+  if (getCurrentLng() === 'es') {
+    projectsList = projects_es.projects;
+  }
+  
+  // const projectsList = projects_de.projects;
 
-// const projectsList = projects_de.projects;
 const sortedList = projectsList.sort((a, b) => b.id - a.id)
+
 const Projects = ({t,props}) => {
   const router = useRouter()
 
