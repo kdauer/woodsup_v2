@@ -7,9 +7,7 @@ return (
     <div className={styles.home}>
     <div className={styles.aboutContainer}>
       <h1>
-        “Wir können nicht länger warten, wir sind die letzte Generation, die
-        noch effektiv die Folgen der ökologischen Katastrophe abmildern kann”
-        (Carola Rackete)
+       {t('heading')}
       </h1>
       <br />
       <p>

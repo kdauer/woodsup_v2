@@ -8,27 +8,24 @@ import { i18n, withTranslation } from '../i18n'
 import projects_en from '../data/projects_en.json'
 import projects_es from '../data/projects_es.json'
 
-const getCurrentLng = () => i18n.language || '';
 
-let projectsList = projects_de.projects
 
-  if (getCurrentLng() === 'de') {
-    projectsList = projects_de.projects;
-  }
-  if (getCurrentLng() === 'en') {
-    projectsList = projects_en.projects;
-  }
-  if (getCurrentLng() === 'es') {
-    projectsList = projects_es.projects;
-  }
-  
-  // const projectsList = projects_de.projects;
-
-const sortedList = projectsList.sort((a, b) => b.id - a.id)
 
 const Projects = ({t,props}) => {
   const router = useRouter()
-
+  let projectsList = projects_de.projects
+  
+  if (i18n.language === 'de') {
+    projectsList = projects_de.projects;
+  }
+  if (i18n.language === 'en') {
+    projectsList = projects_en.projects;
+  }
+  if (i18n.language === 'es') {
+    projectsList = projects_es.projects;
+  }
+  const sortedList = projectsList.sort((a, b) => b.id - a.id)
+  
   return (
     <div className={styles.home}>
     {sortedList.map((project) => (
@@ -41,10 +38,6 @@ const Projects = ({t,props}) => {
                       alt="Projectpicture"
                     />
                     <div className={styles.mask}>
-                      {/* <Link
-                        href={`/projects/${project.id}`}
-                        props={project}
-                      > */}
                        <a className={styles.link} props={project}> <p className={styles.project_title} onClick={() => {
         router.push({
           pathname: '/projects/[pid]',
@@ -52,7 +45,6 @@ const Projects = ({t,props}) => {
         })
       }}>
       {project.title}</p></a>
-                      {/* </Link> */}
                     </div>
                   </div>
                 ) : (

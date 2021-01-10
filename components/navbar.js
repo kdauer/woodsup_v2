@@ -1,27 +1,24 @@
-import Link from 'next/link'
 import { withTranslation } from '../i18n'
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import styles from '../styles/navbar.module.sass'
 
-import styles from '../styles/navbar.module.css'
-
-const Navbar = ({t}) => {
+const Navigation = ({t}) => {
     return (
-        <div className={styles.nav}>
-          <input type="checkbox" id={styles.navCheck} />
-          <div className={styles.navBtn}>
-            <label htmlFor={styles.navCheck}>
-            <span className={styles.line1}></span>
-            <span className={styles.line2}></span>
-            <span className={styles.line3}></span>
-            </label>
-          </div>
-        <div className={styles.navLinks}>
-          <a href="/about">{t('about')}</a>
-          <a href="/projects">{t('projects')}</a>
-          <a href="/support">{t('support')}</a>
-          <a href="/links">{t('motivation')}</a>
-        </div>
-    </div>
+      <div className={styles.nav}>
+      <Navbar expand="lg" className="navbar-custom" sticky="top" expand="lg">
+       <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto"/>
+       <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="ml-auto">
+      <Navbar.Brand href="/about">{t('about')}</Navbar.Brand>
+      <Navbar.Brand href="/projects">{t('projects')}</Navbar.Brand>
+     <Navbar.Brand href="/support">{t('support')}</Navbar.Brand>
+     <Navbar.Brand href="/links">{t('motivation')}</Navbar.Brand>
+     </Nav>
+     </Navbar.Collapse>
+     </Navbar>
+      </div>
     )
 }
 
-export default withTranslation('common')(Navbar)
+export default withTranslation('common')(Navigation)

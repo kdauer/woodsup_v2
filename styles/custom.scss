@@ -1,0 +1,30 @@
+.navbar-custom {
+  width: 100wv;
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.navbar-nav-custom {
+  display: flex;
+  align-items: flex-end;
+  font-size: 22px;
+}
+
+.navbar-custom a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(48, 136, 21) !important;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 20px;
+  padding: 0.15em 0.4em;
+  border-radius: 0.7em;
+  line-height: 2em;
+}
+
+.navbar-custom a:hover {
+  color: #ffffff !important;
+  background-color: rgba(48, 136, 21, 255);
+}
+@import '~bootstrap/scss/bootstrap';
