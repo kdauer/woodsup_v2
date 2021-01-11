@@ -1,15 +1,14 @@
 import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n'
 import styles from '../../styles/projectdetail.module.sass'
 import projects from '../../data/projects_de.json'
 
 const projectsList = projects.projects;
 
-const Project = () => {
+const Project = ({t}) => {
     const router = useRouter()
     const { pid } = router.query
-    console.log("pid",pid)
-
-    // const { params } = projectsList.match;
     const project = projectsList.find(el => {
     return el.id === pid;
   });
@@ -27,10 +26,9 @@ const Project = () => {
           )}
           <p>{project.content}</p>
           {project.video ? (
-            <div className={styles.video_container}>
-            <video className={styles.player}
-       url={project.video} width='100%'
-      height='100%' /></div>
+            <div className={styles.player}>
+            <iframe  width="560" height="315" src={project.video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           ) : (
             <div></div>
           )}
@@ -42,4 +40,13 @@ const Project = () => {
         </div>
       );
 }
-export default Project;
+
+Project.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+Project.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+
+export default withTranslation('common')(Project)

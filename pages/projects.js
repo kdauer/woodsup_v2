@@ -42,7 +42,7 @@ const Projects = ({t,props}) => {
         router.push({
           pathname: '/projects/[pid]',
           query: { pid: project.id },
-        })
+          })
       }}>
       {project.title}</p></a>
                     </div>

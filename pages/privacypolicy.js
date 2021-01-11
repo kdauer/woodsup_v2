@@ -16,7 +16,7 @@ const Protection = ({t}) => {
       <p>
         <span id="s3-t-firma">WoodsUp e.V.</span>
         <br />
-        <span id="s3-t-ansprechpartner">{t('contactperson')}</span>
+        <span id="s3-t-ansprechpartner">Christinie Bindal, Ilja Schlling, Falko Drescher</span>
         <br />
         <span id="s3-t-strasse">Wollestraße 52</span>
         <br />

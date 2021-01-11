@@ -13,7 +13,7 @@ const Header = ({t}) => {
     <div className={styles.navImg}>
     <h1 className={styles.logo}>
       <Link href="/">
-        <img src="./IMG_2825.JPG" alt="Logo" className={styles.logoImg} />
+        <img src="./IMG_2825.JPG" alt="Logo" />
       </Link>
     </h1>
     <Navigation />
