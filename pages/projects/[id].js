@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import { withTranslation } from '../../i18n'
 import styles from '../../styles/projectdetail.module.sass'
+import Carousel from 'react-bootstrap/Carousel'
 import projects from '../../data/projects_de.json'
 
 const projectsList = projects.projects;
@@ -12,6 +13,8 @@ const Project = ({t}) => {
     const project = projectsList.find(el => {
     return el.id === pid;
   });
+  const gallery = project.gallery;
+  console.log(gallery)
 
     if (!project) {
         return <div>Loading</div>;
@@ -32,6 +35,17 @@ const Project = ({t}) => {
           ) : (
             <div></div>
           )}
+          <Carousel>
+          {gallery.map((el) => (
+            <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={el}
+              alt="slide"
+                />
+            </Carousel.Item>
+            ))}
+            </Carousel>
           {project.presslink ? (
             <a href={project.presslink}>"Presse"</a>
           ) : (
