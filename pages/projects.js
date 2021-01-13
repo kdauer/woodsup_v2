@@ -38,10 +38,11 @@ const Projects = ({t,props}) => {
                       alt="Projectpicture"
                     />
                     <div className={styles.mask}>
-                       <a className={styles.link} props={project}> <p className={styles.project_title} onClick={() => {
+                       <a href="#" className={styles.link} props={project}> <p className={styles.project_title} onClick={() => {
         router.push({
           pathname: '/projects/[pid]',
           query: { pid: project.id },
+          scroll: true
           })
       }}>
       {project.title}</p></a>

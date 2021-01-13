@@ -15,6 +15,8 @@ const Project = ({t}) => {
   });
 
 const images = project.gallery;
+const presslinks = project.presslinks;
+
     if (!project) {
         return <div>Loading</div>;
       }
@@ -46,8 +48,13 @@ const images = project.gallery;
             </Carousel.Item>
             ))}
             </Carousel>):(<div></div>)}
-          {project.presslink ? (
-            <a href={project.presslink}>"Presse"</a>
+          {presslinks ? (
+            <ul>  
+            <h5>Für Presseartikel</h5>
+            {presslinks.map((link) =>(
+              <li><a href={link}>hier entlang</a></li>
+            ))}
+            </ul>
           ) : (
             <p></p>
           )}
