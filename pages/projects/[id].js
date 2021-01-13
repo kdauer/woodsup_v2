@@ -13,9 +13,8 @@ const Project = ({t}) => {
     const project = projectsList.find(el => {
     return el.id === pid;
   });
-  const gallery = project.gallery;
-  console.log(gallery)
 
+const images = project.gallery;
     if (!project) {
         return <div>Loading</div>;
       }
@@ -35,17 +34,18 @@ const Project = ({t}) => {
           ) : (
             <div></div>
           )}
-          <Carousel>
-          {gallery.map((el) => (
-            <Carousel.Item>
+          {images ? (
+          <Carousel className="carousel-custom">
+          {images.map((image) => (
+            <Carousel.Item key={image}>
             <img
               className="d-block w-100"
-              src={el}
+              src={image}
               alt="slide"
                 />
             </Carousel.Item>
             ))}
-            </Carousel>
+            </Carousel>):(<div></div>)}
           {project.presslink ? (
             <a href={project.presslink}>"Presse"</a>
           ) : (

@@ -27,4 +27,16 @@
   color: #ffffff !important;
   background-color: rgba(48, 136, 21, 255);
 }
+
+.carousel-custom {
+  display: block;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 75%;
+  border-radius: 10px;
+  margin-bottom: 4em;
+}
+
 @import '~bootstrap/scss/bootstrap';

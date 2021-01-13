@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 import { withTranslation } from '../i18n'
 import styles from '../styles/protection.module.sass'
 
-const Protection = ({t}) => {
-    return (
-        <div className={styles.protection}>
+const Protection = ({ t }) => {
+  return (
+    <div className={styles.protection}>
       <p>
         <strong>
           <big>{t('p_1')}</big>
@@ -16,7 +16,7 @@ const Protection = ({t}) => {
       <p>
         <span id="s3-t-firma">WoodsUp e.V.</span>
         <br />
-        <span id="s3-t-ansprechpartner">Christinie Bindal, Ilja Schlling, Falko Drescher</span>
+        <span id="s3-t-ansprechpartner">Falko Drescher</span>
         <br />
         <span id="s3-t-strasse">Wollestraße 52</span>
         <br />
@@ -76,15 +76,15 @@ const Protection = ({t}) => {
         </a>
       </p>
     </div>
-    )
+  )
 }
 
 Protection.getInitialProps = async () => ({
-    namespacesRequired: ['privacypolicy'],
-  })
-  
-  Protection.propTypes = {
-    t: PropTypes.func.isRequired,
-  }
+  namespacesRequired: ['privacypolicy'],
+})
+
+Protection.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 export default withTranslation('privacypolicy')(Protection)

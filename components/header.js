@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Image from 'next/image'
 import Navigation from '../components/navbar'
 import { i18n, withTranslation } from '../i18n'
 import styles from '../styles/header.module.sass'
@@ -14,7 +13,7 @@ const Header = ({t}) => {
     <div className={styles.navImg}>
     <h1 className={styles.logo}>
       <Link href="/">
-        <Image src="/IMG_2825.JPG" alt="Logo" height="64px" width="128px"/>
+        <img src="/IMG_2825.JPG" alt="Logo" height="64px" width="128px"/>
       </Link>
     </h1>
     <Navigation />
