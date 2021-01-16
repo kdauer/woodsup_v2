@@ -16,7 +16,7 @@ const Footer = ({t}) => {
     )
 }
 
-Footer.getStaticProps = async () => ({
+Footer.getInitialProps = async () => ({
   namespacesRequired: ['common'],
 })
 

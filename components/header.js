@@ -28,7 +28,7 @@ const Header = ({t}) => {
   )
 }
 
-Header.getStaticProps = async () => ({
+Header.getInitialProps = async () => ({
   namespacesRequired: ['common'],
 })
 

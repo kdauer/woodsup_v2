@@ -14,7 +14,7 @@ const News = ({t}) => {
     )
 }
 
-News.getStaticProps = async () => ({
+News.getInitialProps = async () => ({
     namespacesRequired: ['news'],
   })
   

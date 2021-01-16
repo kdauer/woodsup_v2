@@ -35,8 +35,8 @@ const MyApp = ({ Component, pageProps }) => {
   </>
 }
 
-MyApp.getStaticProps = async (appContext) => {
-  const appProps = await App.getStaticProps(appContext)
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext)
   return { ...appProps }
 }
 

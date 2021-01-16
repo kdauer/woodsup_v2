@@ -28,7 +28,7 @@ const Imprint = ({t}) => {
     )
 }
 
-Imprint.getStaticProps = async () => ({
+Imprint.getInitialProps = async () => ({
     namespacesRequired: ['legalnotice'],
   })
   

@@ -19,7 +19,7 @@ const Motivation = ({t}) => {
     )
 }
 
-Motivation.getStaticProps = async () => ({
+Motivation.getInitialProps = async () => ({
     namespacesRequired: ['common'],
   })
   
