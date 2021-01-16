@@ -39,7 +39,7 @@ const Support = ({t}) => {
     )
 }
 
-Support.getInitialProps = async () => ({
+Support.getStaticProps = async () => ({
     namespacesRequired: ['common'],
   })
   

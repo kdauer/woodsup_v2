@@ -62,7 +62,7 @@ const presslinks = project.presslinks;
       );
 }
 
-Project.getInitialProps = async () => ({
+Project.getStaticProps = async () => ({
   namespacesRequired: ['common'],
 })
 

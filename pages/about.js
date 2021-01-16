@@ -27,7 +27,7 @@ return (
 )
 }
 
-About.getInitialProps = async () => ({
+About.getStaticProps = async () => ({
     namespacesRequired: ['common'],
   })
   

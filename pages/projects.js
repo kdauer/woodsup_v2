@@ -65,7 +65,7 @@ const Projects = ({t,props}) => {
 )
 }
 
-Projects.getInitialProps = async () => ({
+Projects.getStaticProps = async () => ({
   namespacesRequired: ['common'],
 })
 

@@ -79,7 +79,7 @@ const Protection = ({ t }) => {
   )
 }
 
-Protection.getInitialProps = async () => ({
+Protection.getStaticProps = async () => ({
   namespacesRequired: ['privacypolicy'],
 })
 
