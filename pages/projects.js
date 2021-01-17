@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import styles from '../styles/projects.module.sass'
 import projects_de from '../data/projects_de.json'
 import { i18n, withTranslation } from '../i18n'
@@ -12,7 +11,6 @@ import projects_es from '../data/projects_es.json'
 
 
 const Projects = ({t,props}) => {
-  const router = useRouter()
   let projectsList = projects_de.projects
   
   if (i18n.language === 'de') {
@@ -38,14 +36,9 @@ const Projects = ({t,props}) => {
                       alt="Projectpicture"
                     />
                     <div className={styles.mask}>
-                       <a href="#" className={styles.link} props={project}> <p className={styles.project_title} onClick={() => {
-        router.push({
-          pathname: '/projects/[pid]',
-          query: { pid: project.id },
-          scroll: true
-          })
-      }}>
-      {project.title}</p></a>
+                       <a href={`/projects/${project.id}`} className={styles.link} props={project}> <p className={styles.project_title}>
+                        {project.title}</p>
+                       </a>
                     </div>
                   </div>
                 ) : (

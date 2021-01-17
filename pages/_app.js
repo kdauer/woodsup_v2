@@ -35,9 +35,9 @@ const MyApp = ({ Component, pageProps }) => {
   </>
 }
 
-// MyApp.getInitialProps = async (appContext) => {
-//   const appProps = await App.getInitialProps(appContext)
-//   return { ...appProps }
-// }
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext)
+  return { ...appProps }
+}
 
 export default appWithTranslation(MyApp)
