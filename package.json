@@ -2,7 +2,7 @@
   "name": "woodsup_v2",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://woodsup-v2.vercel.app/",
+  "homepage": ".",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
