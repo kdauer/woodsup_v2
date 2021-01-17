@@ -10,12 +10,12 @@ const Homepage = ({t}) => (
       <div className={styles.welcome}>
       <News/>
 </div>
-<CookieConsent location="bottom"
+{/* <CookieConsent location="bottom"
   buttonText={t('cookieButton')}
   cookieName="myAwesomeCookieName2"
           style={{ background: '#2B373B' }}
           buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
-          expires={150}>{t('cookieText')}</CookieConsent>
+          expires={150}>{t('cookieText')}</CookieConsent> */}
     </main>
   </>
 )
