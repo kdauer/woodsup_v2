@@ -20,7 +20,7 @@ const Homepage = ({t}) => (
   </>
 )
 
-Homepage.getInitialProps = async () => ({
+Homepage.getStaticProps = async () => ({
   namespacesRequired: ['common'],
 })
 

@@ -2,8 +2,8 @@
   "name": "woodsup_v2",
   "version": "1.0.0",
   "description": "",
+  "homepage": ".",
   "main": "index.js",
-  "homepage": "./",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
