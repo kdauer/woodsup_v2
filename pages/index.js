@@ -20,12 +20,12 @@ const Homepage = ({t}) => (
   </>
 )
 
-Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+// Homepage.getInitialProps = async () => ({
+//   namespacesRequired: ['common'],
+// })
 
-Homepage.propTypes = {
-  t: PropTypes.func.isRequired,
-}
+// Homepage.propTypes = {
+//   t: PropTypes.func.isRequired,
+// }
 
 export default withTranslation('common')(Homepage)
