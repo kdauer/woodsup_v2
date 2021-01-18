@@ -1,7 +1,14 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
+  "/about": "pages/about.js",
+  "/contact": "pages/contact.js",
+  "/": "pages/index.js",
+  "/legalnotice": "pages/legalnotice.js",
+  "/links": "pages/links.js",
+  "/privacypolicy": "pages/privacypolicy.js",
+  "/projects": "pages/projects.js",
   "/projects/[pid]": "pages/projects/[pid].js",
-  "/projects": "pages/projects.js"
+  "/support": "pages/support.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
 }
