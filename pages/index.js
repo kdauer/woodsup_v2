@@ -4,7 +4,7 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 import styles from '../styles/home.module.sass'
 import News from '../components/news'
 
-const Homepage = ({t}) => (
+const HomePage = ({t}) => (
   <>
     <main >
       <div className={styles.welcome}>
@@ -20,12 +20,12 @@ const Homepage = ({t}) => (
   </>
 )
 
-Homepage.getInitialProps = async () => ({
+HomePage.getInitialProps = async () => ({
   namespacesRequired: ['common'],
 })
 
-Homepage.propTypes = {
+HomePage.propTypes = {
   t: PropTypes.func.isRequired,
 }
 
-export default withTranslation('common')(Homepage)
+export default withTranslation('common')(HomePage)
