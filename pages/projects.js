@@ -58,6 +58,9 @@ const Projects = ({t,props}) => {
 )
 }
 
+Projects.getInitialProps = async () => ({
+})
+
 // Projects.getInitialProps = async () => ({
 //   namespacesRequired: ['common'],
 // })

@@ -18,6 +18,8 @@ const Motivation = ({t}) => {
       </div>
     )
 }
+Motivation.getInitialProps = async () => ({
+  })
 
 // Motivation.getInitialProps = async () => ({
 //     namespacesRequired: ['common'],

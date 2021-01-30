@@ -16,6 +16,10 @@ const Footer = ({t}) => {
     )
 }
 
+Footer.getInitialProps = async () => ({
+  
+})
+
 // Footer.getInitialProps = async () => ({
 //   namespacesRequired: ['common'],
 // })

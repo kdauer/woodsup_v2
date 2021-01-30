@@ -27,9 +27,8 @@ return (
 )
 }
 
-// About.getInitialProps = async () => ({
-//     namespacesRequired: ['common'],
-//   })
+About.getInitialProps = async () => ({
+  })
   
 //   About.propTypes = {
 //     t: PropTypes.func.isRequired,

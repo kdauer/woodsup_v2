@@ -28,9 +28,8 @@ const Header = ({t}) => {
   )
 }
 
-// Header.getInitialProps = async () => ({
-//   namespacesRequired: ['common'],
-// })
+Header.getInitialProps = async () => ({
+})
 
 // Header.propTypes = {
 //   t: PropTypes.func.isRequired,
