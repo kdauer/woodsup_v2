@@ -1,4 +1,4 @@
-import App from 'next/app'
+// import App from 'next/app'
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -32,8 +32,8 @@ const MyApp = ({ Component}) => {
   <title>WoodsUp e.V.</title>
   </Head>
   <Header/>
-  <Component {...pageProps} />
-  {/* <Component/> */}
+  {/* <Component {...pageProps} /> */}
+  <Component/>
   <Footer/>
   </>
 }
