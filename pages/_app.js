@@ -5,9 +5,9 @@ import Footer from '../components/footer'
 import '../styles/styles.sass'
 // import { appWithTranslation } from '../i18n'
 
-const MyApp = ({ Component, pageProps }) => {
+// const MyApp = ({ Component, pageProps }) => {
 
-// const MyApp = ({ Component}) => {
+const MyApp = ({ Component}) => {
   console.log("WoodsUp e.v. - from Potsdam with ❤");
   return <>
   <Head>
@@ -38,11 +38,16 @@ const MyApp = ({ Component, pageProps }) => {
   </>
 }
 
-MyApp.getInitialProps = async (appContext) => {
-  const appProps = await App.getInitialProps(appContext)
-  return { ...appProps }
-}
+// MyApp.getInitialProps = async (appContext) => {
+//   const appProps = await App.getInitialProps(appContext)
+//   return { ...appProps }
+// }
 
 export default MyApp
 
 // export default appWithTranslation(MyApp)
+
+// const { Component, pageProps } = this.props;
+// if (Component.WrappedComponent) {
+//   Component.getInitialProps = Component.WrappedComponent.getInitialProps
+// }
