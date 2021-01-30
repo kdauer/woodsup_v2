@@ -8,13 +8,15 @@ import projects from '../../data/projects_de.json'
 const projectsList = projects.projects;
 
 const Project = ({t}) => {
-    const router = useRouter()
-    const { pid } = router.query
-    const project = projectsList.find(el => {
-    return el.id === pid;
+  const router = useRouter()
+  const { pid } = router.query
+  const project = projectsList.find(el => {
+    console.log(el)
+  return el.id === pid;
   });
-const images = project.gallery;
-const presslinks = project.presslinks;
+  console.log(project)
+  const images = project.gallery;
+  const presslinks = project.presslinks;
 
     if (!project) {
         return <div>Loading</div>;
@@ -60,6 +62,9 @@ const presslinks = project.presslinks;
         </div>
       );
 }
+
+Project.getInitialProps = async () => ({
+})
 
 // Project.getInitialProps = async () => ({
 //   namespacesRequired: ['common'],
