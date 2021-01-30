@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
+// import PropTypes from 'prop-types'
+// import { withTranslation } from '../../i18n'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
 import projects from '../../data/projects_de.json'
