@@ -69,4 +69,4 @@ const Projects = ({t,props}) => {
 export default Projects
 
 
-export default withTranslation('common')(Projects)
+// export default withTranslation('common')(Projects)
