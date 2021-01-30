@@ -61,12 +61,14 @@ const presslinks = project.presslinks;
       );
 }
 
-Project.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+// Project.getInitialProps = async () => ({
+//   namespacesRequired: ['common'],
+// })
 
-Project.propTypes = {
-  t: PropTypes.func.isRequired,
-}
+// Project.propTypes = {
+//   t: PropTypes.func.isRequired,
+// }
+export default Project
 
-export default withTranslation('common')(Project)
+
+// export default withTranslation('common')(Project)

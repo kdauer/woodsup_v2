@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../i18n'
+// import PropTypes from 'prop-types'
+// import { withTranslation } from '../i18n'
 import styles from '../styles/support.module.sass'
 
 const Support = ({t}) => {
     return (
         <div className={styles.home}>
         <div className={styles.supportContainer}>
-      <h1>{t("common:support")}</h1>
+      {/* <h1>{t("common:support")}</h1> */}
       <p>
-        <b>
+        {/* <b>
         {t("common:supportParagraphOne")}
-        </b>
+        </b> */}
       </p>
-      <p>{t("common:supportParagraphTwo")}</p>
+      {/* <p>{t("common:supportParagraphTwo")}</p> */}
       <p>
         <b>
           Woods Up e.V. <br />
@@ -21,17 +21,17 @@ const Support = ({t}) => {
           IBAN: DE 68 1001 7997 8678 3814 89
         </b>
       </p>
-      <p>
+      {/* <p>
       {t("common:supportContact")} <a href="woodsup@posteo.de">woodsup@posteo.de</a>
-      </p>
+      </p> */}
       <div className={styles.paypal}>
         <img src="/QR-Code.png" alt="QR-Code" />
-        <a
+        {/* <a
           href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F4CTCSJDAN8DQ&source=url"
           className={styles.donateBtn}
         >
           {t("common:donate")}
-        </a>
+        </a> */}
       </div>
       <div className={styles.space}></div>
     </div>
@@ -39,12 +39,14 @@ const Support = ({t}) => {
     )
 }
 
-Support.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-  })
+// Support.getInitialProps = async () => ({
+//     namespacesRequired: ['common'],
+//   })
   
-  Support.propTypes = {
-    t: PropTypes.func.isRequired,
-  }
+//   Support.propTypes = {
+//     t: PropTypes.func.isRequired,
+//   }
 
-export default withTranslation('common')(Support)
+export default Support
+
+// export default withTranslation('common')(Support)

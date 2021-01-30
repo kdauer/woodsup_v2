@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import Link from 'next/link'
 import Navigation from '../components/navbar'
-import { i18n, withTranslation } from '../i18n'
+// import { i18n, withTranslation } from '../i18n'
 import styles from '../styles/header.module.sass'
 
 const Header = ({t}) => {
-  const changeLang = (event) => {
-    i18n.changeLanguage(event.currentTarget.value)
-  }
+//   const changeLang = (event) => {
+//     i18n.changeLanguage(event.currentTarget.value)
+//   }
 
   return (
     <div className={styles.navImg}>
@@ -18,21 +18,24 @@ const Header = ({t}) => {
     </h1>
     <Navigation />
     <div className={styles.langContainer}>
-    <select name="language" id="language" onChange={changeLang} selected>
+    {/* <select name="language" id="language" onChange={changeLang} selected>
       <option value="de">🇩🇪</option>
       <option value="en">🇬🇧</option>
       <option value="es">🇪🇸</option>
-    </select>
+    </select> */}
 </div>
   </div>
   )
 }
 
-Header.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+// Header.getInitialProps = async () => ({
+//   namespacesRequired: ['common'],
+// })
 
-Header.propTypes = {
-  t: PropTypes.func.isRequired,
-}
-export default withTranslation('common')(Header)
+// Header.propTypes = {
+//   t: PropTypes.func.isRequired,
+// }
+
+export default Header;
+
+// export default withTranslation('common')(Header)

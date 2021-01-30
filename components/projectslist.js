@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { withTranslation } from '../i18n'
+// import { withTranslation } from '../i18n'
 import styles from '../styles/projects.module.sass'
 
 

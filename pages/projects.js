@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import Link from 'next/link'
 import styles from '../styles/projects.module.sass'
 import projects_de from '../data/projects_de.json'
-import { i18n, withTranslation } from '../i18n'
+// import { i18n, withTranslation } from '../i18n'
 
-import projects_en from '../data/projects_en.json'
-import projects_es from '../data/projects_es.json'
+// import projects_en from '../data/projects_en.json'
+// import projects_es from '../data/projects_es.json'
 
 
 
@@ -13,15 +13,15 @@ import projects_es from '../data/projects_es.json'
 const Projects = ({t,props}) => {
   let projectsList = projects_de.projects
   
-  if (i18n.language === 'de') {
-    projectsList = projects_de.projects;
-  }
-  if (i18n.language === 'en') {
-    projectsList = projects_en.projects;
-  }
-  if (i18n.language === 'es') {
-    projectsList = projects_es.projects;
-  }
+  // if (i18n.language === 'de') {
+  //   projectsList = projects_de.projects;
+  // }
+  // if (i18n.language === 'en') {
+  //   projectsList = projects_en.projects;
+  // }
+  // if (i18n.language === 'es') {
+  //   projectsList = projects_es.projects;
+  // }
   const sortedList = projectsList.sort((a, b) => b.id - a.id)
   
   return (
@@ -58,11 +58,15 @@ const Projects = ({t,props}) => {
 )
 }
 
-Projects.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+// Projects.getInitialProps = async () => ({
+//   namespacesRequired: ['common'],
+// })
 
-Projects.propTypes = {
-  t: PropTypes.func.isRequired,
-}
+// Projects.propTypes = {
+//   t: PropTypes.func.isRequired,
+// }
+
+export default Projects
+
+
 export default withTranslation('common')(Projects)
