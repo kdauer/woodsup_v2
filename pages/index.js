@@ -20,8 +20,8 @@ const HomePage = ({t}) => (
   </>
 )
 
- HomePage.getInitialProps = async () => ({
-  })
+//  HomePage.getInitialProps = async () => ({
+//   })
 
 // HomePage.getInitialProps = async () => ({
 //   namespacesRequired: ['common'],
