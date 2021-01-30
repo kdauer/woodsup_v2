@@ -7,7 +7,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"2",
@@ -34,7 +34,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"5",
@@ -61,7 +61,7 @@
             "content":"",
             "video":"https://www.youtube.com/embed/9uYkBS9e6p4",
             "presslinks":["https://m.maz-online.de/Lokales/Potsdam/Potsdamer-Aktivisten-pflanzen-einen-Klimawald-in-Island"],
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"8",
@@ -70,7 +70,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"9",
@@ -79,7 +79,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
             }
         ]
 }
