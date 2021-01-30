@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 // import { withTranslation } from '../i18n'
-import CookieConsent, { Cookies } from "react-cookie-consent";
+// import CookieConsent, { Cookies } from "react-cookie-consent";
 import styles from '../styles/home.module.sass'
 import News from '../components/news'
 

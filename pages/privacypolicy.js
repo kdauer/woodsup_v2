@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../i18n'
+// import PropTypes from 'prop-types'
+// import { withTranslation } from '../i18n'
 import styles from '../styles/protection.module.sass'
 
 const Protection = ({ t }) => {
