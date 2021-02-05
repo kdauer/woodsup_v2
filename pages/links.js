@@ -1,5 +1,3 @@
-// import PropTypes from 'prop-types'
-// import { withTranslation } from '../i18n'
 import styles from '../styles/links.module.sass'
 import links from '../data/links.json'
 
@@ -18,17 +16,5 @@ const Motivation = ({t}) => {
       </div>
     )
 }
-Motivation.getInitialProps = async () => ({
-  })
-
-// Motivation.getInitialProps = async () => ({
-//     namespacesRequired: ['common'],
-//   })
-  
-//   Motivation.propTypes = {
-//     t: PropTypes.func.isRequired,
-//   }
 
 export default Motivation
-
-// export default withTranslation('common')(Motivation)

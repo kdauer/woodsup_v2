@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-// import PropTypes from 'prop-types'
-// import { withTranslation } from '../../i18n'
+import { withTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
 import projects from '../../data/projects_de.json'
@@ -11,16 +11,15 @@ const Project = ({t}) => {
   const router = useRouter()
   const { pid } = router.query
   const project = projectsList.find(el => {
-    console.log(el)
+    // console.log(el)
   return el.id === pid;
   });
-  console.log(project)
   const images = project.gallery;
   const presslinks = project.presslinks;
 
     if (!project) {
         return <div>Loading</div>;
-      }
+      } else 
       return (
         <div className={styles.detail_container}>
           <h2>{project.title}</h2>
@@ -63,17 +62,29 @@ const Project = ({t}) => {
       );
 }
 
-Project.getInitialProps = async () => ({
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  }
 })
 
-// Project.getInitialProps = async () => ({
-//   namespacesRequired: ['common'],
-// })
+export async function getStaticPaths() {
+  return {
+    // Only `/posts/1` and `/posts/2` are generated at build time
+   paths: [
+     { params: { pid: '1' } }, 
+     { params: { pid: '2' } }, 
+     { params: { pid: '3' } }, 
+     { params: { pid: '4' } }, 
+     { params: { pid: '5' } }, 
+     { params: { pid: '6' } }, 
+     { params: { pid: '7' } }, 
+     { params: { pid: '8' } }, 
+     { params: { pid: '9' } }],
+    // Enable statically generating additional pages
+    // For example: `/posts/3`
+    fallback: true,
+  }
+}
 
-// Project.propTypes = {
-//   t: PropTypes.func.isRequired,
-// }
-export default Project
-
-
-// export default withTranslation('common')(Project)
+export default withTranslation('common')(Project)

@@ -1,12 +1,12 @@
-// import PropTypes from 'prop-types'
-// import { withTranslation } from '../i18n'
+import { withTranslation } from 'next-i18next'
+import PropTypes from 'prop-types'
 import styles from '../styles/about.module.sass'
 
 const About = ({t}) => {
 return (
     <div className={styles.home}>
     <div className={styles.aboutContainer}>
-      {/* <h1>
+      <h1>
        {t('heading')}
       </h1>
       <br />
@@ -20,20 +20,15 @@ return (
       <br />
       <p>
       {t('aboutParagraphThree')}
-      </p> */}
+      </p>
       <div className="space"></div>
     </div>
     </div>
 )
 }
 
-About.getInitialProps = async () => ({
-  })
-  
-//   About.propTypes = {
-//     t: PropTypes.func.isRequired,
-//   }
+About.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
-export default About
-
-// export default withTranslation('common')(About)
+export default withTranslation('common')(About)

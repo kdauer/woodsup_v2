@@ -1,6 +1,4 @@
-// import PropTypes from 'prop-types'
 import Link from 'next/link'
-// import { withTranslation } from '../i18n'
 import styles from '../styles/projects.module.sass'
 
 
@@ -41,4 +39,4 @@ const Projectslist = () => {
             })
     )}
 
-export default Projectslist
+    export default Projectslist

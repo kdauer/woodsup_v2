@@ -1,5 +1,5 @@
-// import PropTypes from 'prop-types'
-// import { withTranslation } from '../i18n'
+import { withTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../styles/imprint.module.sass'
 
 const Imprint = ({t}) => {
@@ -15,7 +15,7 @@ const Imprint = ({t}) => {
         Mail: <a href="woodsup@posteo.de">woodsup@posteo.de</a>
       </p>
       <br />
-      {/* <h3>{t('h3')}</h3>
+      <h3>{t('h3')}</h3>
       <h5>{t('h5_1')}</h5>
       <p>{t('p_1')}</p>
       <h5>{t('h5_2')}</h5>
@@ -23,22 +23,15 @@ const Imprint = ({t}) => {
       <h5>{t('h5_3')}</h5>
       <p>{t('p_3')}</p>
       <h5>{t('h5_4')}</h5>
-      <p>{t('p_4')}</p> */}
+      <p>{t('p_4')}</p>
     </div>
     )
 }
 
-Imprint.getInitialProps = async () => ({
-  })
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['legalnotice']),
+  }
+})
 
-// Imprint.getInitialProps = async () => ({
-//     namespacesRequired: ['legalnotice'],
-//   })
-  
-//   Imprint.propTypes = {
-//     t: PropTypes.func.isRequired,
-//   }
-
-export default Imprint
-
-// export default withTranslation('legalnotice')(Imprint)
+export default withTranslation('legalnotice')(Imprint)
