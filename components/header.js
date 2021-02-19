@@ -1,14 +1,12 @@
 import Link from 'next/link'
-import {  withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
+import PropTypes from 'prop-types'
 import Navigation from '../components/navbar'
 import styles from '../styles/header.module.sass'
 
-const Header = ({t, i18n}) => {
+const Header = ({props}) => {
+  const { i18n } = useTranslation('common','news')
   console.log(i18n.language)
-  const changeLang = (event) => {
-    i18n.changeLanguage(event.currentTarget.value)
-  }
-
   return (
     <div className={styles.navImg}>
     <h1 className={styles.logo}>
@@ -17,16 +15,19 @@ const Header = ({t, i18n}) => {
       </Link>
     </h1>
     <Navigation />
-    <div className={styles.langContainer}>
-    <select name="language" id="language" onChange={changeLang} selected>
+    {/* <div className={styles.langContainer}>
+    <select name="language" id="language" locale={i18n.language}
+        onChange={(e) =>
+          i18n.changeLanguage(e.target.value)
+        } selected>
       <option value="de">🇩🇪</option>
       <option value="en">🇬🇧</option>
       <option value="es">🇪🇸</option>
     </select>
-</div>
+</div> */}
   </div>
   )
 }
 
 
-export default withTranslation('common')(Header)
+export default Header

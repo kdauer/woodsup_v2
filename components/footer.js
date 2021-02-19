@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types'
+import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
-import { withTranslation } from 'next-i18next'
 import styles from '../styles/footer.module.sass'
 
-const Footer = ({t}) => {
+const Footer = () => {
+  const { t } = useTranslation('common')
+
     return (
 <div className={styles.footer}>      
        <p>Copyright © 2021 Woods Up e.V.</p> 
@@ -16,8 +17,5 @@ const Footer = ({t}) => {
     )
 }
 
-Footer.propTypes = {
-  t: PropTypes.func.isRequired,
-}
 
-export default withTranslation('common')(Footer)
+export default Footer

@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import styles from "../styles/news.module.sass"
 
-const News = ({t}) => {
+const News = () => {
+    const { t } = useTranslation('news')
     return (
         <div className={styles.news_container}>
             <h2>{t('h2')}</h2>
@@ -14,8 +14,5 @@ const News = ({t}) => {
     )
 }
 
-News.propTypes = {
-    t: PropTypes.func.isRequired,
-  }
 
-export default withTranslation('news')(News)
+export default News

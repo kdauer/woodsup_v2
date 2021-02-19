@@ -4,12 +4,12 @@ import Footer from '../components/footer'
 import '../styles/styles.sass'
 
 
-const MyApp = ({ Component, pageProps}) => {
-  return <>
-  <Header/>
+const MyApp = ({ Component, pageProps}) => 
+   <>
+  <Header {...pageProps}/>
   <Component {...pageProps} />
-  <Footer/>
+  <Footer {...pageProps}/>
   </>
-}
+
 
 export default appWithTranslation(MyApp)

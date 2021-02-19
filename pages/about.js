@@ -1,8 +1,10 @@
-import { withTranslation } from 'next-i18next'
-import PropTypes from 'prop-types'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../styles/about.module.sass'
 
-const About = ({t}) => {
+const About = () => {
+  const { t } = useTranslation('common')
+
 return (
     <div className={styles.home}>
     <div className={styles.aboutContainer}>
@@ -27,8 +29,10 @@ return (
 )
 }
 
-About.propTypes = {
-  t: PropTypes.func.isRequired,
-}
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  }
+})
 
-export default withTranslation('common')(About)
+export default About

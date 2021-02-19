@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
@@ -7,7 +7,8 @@ import projects from '../../data/projects_de.json'
 
 const projectsList = projects.projects;
 
-const Project = ({t}) => {
+const Project = () => {
+  const { t } = useTranslation('common')
   const router = useRouter()
   const { pid } = router.query
   const project = projectsList.find(el => {
@@ -87,4 +88,4 @@ export async function getStaticPaths() {
   }
 }
 
-export default withTranslation('common')(Project)
+export default Project

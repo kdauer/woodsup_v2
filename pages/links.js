@@ -3,7 +3,7 @@ import links from '../data/links.json'
 
 const linklist = links.links;
 
-const Motivation = ({t}) => {
+const Motivation = () => {
     return (
         <div className={styles.home}>
         <div className={styles.space}>

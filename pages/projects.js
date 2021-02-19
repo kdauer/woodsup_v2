@@ -10,6 +10,7 @@ import projects_es from '../data/projects_es.json'
 
 
 const Projects = ({t,props,i18n}) => {
+
   let projectsList = projects_de.projects
   
   if (i18n.language === 'de') {

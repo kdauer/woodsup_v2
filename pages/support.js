@@ -1,8 +1,9 @@
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../styles/support.module.sass'
 
-const Support = ({t}) => {
+const Support = () => {
+  const { t } = useTranslation('common')
     return (
         <div className={styles.home}>
         <div className={styles.supportContainer}>
@@ -45,4 +46,4 @@ export const getStaticProps = async ({ locale }) => ({
   }
 })
 
-export default withTranslation('common')(Support)
+export default Support

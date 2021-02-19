@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import styles from '../styles/navbar.module.sass'
 
-const Navigation = ({t}) => {
+const Navigation = () => {
+  const { t } = useTranslation('common','news')
     return (
       <div className={styles.nav}>
       <Navbar expand="lg" className="navbar-custom" sticky="top" expand="lg">
@@ -22,7 +24,4 @@ const Navigation = ({t}) => {
     )
 }
 
-Navigation.propTypes = {
-  t: PropTypes.func.isRequired,
-}
-export default withTranslation('common')(Navigation)
+export default Navigation

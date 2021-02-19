@@ -1,10 +1,13 @@
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import CookieConsent, { Cookies } from "react-cookie-consent";
 import Head from 'next/head'
 import styles from '../styles/home.module.sass'
 import News from '../components/news'
 
-const Homepage = ({t}) => {
+const Homepage = () => {
+  const { t } = useTranslation('common')
+
   console.log("WoodsUp e.v. - from Potsdam with ❤");
   return (
   <>
@@ -43,4 +46,10 @@ const Homepage = ({t}) => {
   </>
 )}
 
-export default withTranslation('common')(Homepage)
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common','news']),
+  }
+})
+
+export default Homepage

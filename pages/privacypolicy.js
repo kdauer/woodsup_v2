@@ -1,8 +1,10 @@
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../styles/protection.module.sass'
 
-const Protection = ({ t }) => {
+const Protection = () => {
+  const { t } = useTranslation('privacypolicy')
+
   return (
     <div className={styles.protection}>
       <p>
@@ -81,8 +83,8 @@ const Protection = ({ t }) => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['privacypolicy']),
+    ...await serverSideTranslations(locale, ['privavypolicy']),
   }
 })
 
-export default withTranslation('privacypolicy')(Protection)
+export default Protection
