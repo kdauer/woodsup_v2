@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
@@ -8,7 +7,6 @@ import projects from '../../data/projects_de.json'
 const projectsList = projects.projects;
 
 const Project = () => {
-  const { t } = useTranslation('common')
   const router = useRouter()
   const { pid } = router.query
   const project = projectsList.find(el => {
@@ -17,7 +15,7 @@ const Project = () => {
   });
   const images = project.gallery;
   const presslinks = project.presslinks;
-
+console.log(project.id)
     if (!project) {
         return <div>Loading</div>;
       } else 
