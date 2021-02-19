@@ -60,13 +60,6 @@ console.log(project.id)
         </div>
       );
 }
-
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...await serverSideTranslations(locale, ['common']),
-  }
-})
-
 export async function getStaticPaths() {
   return {
     // Only `/posts/1` and `/posts/2` are generated at build time
@@ -85,5 +78,13 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  }
+})
+
+
 
 export default Project
