@@ -3,9 +3,9 @@ import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import projects_de from '../data/projects_de.json'
-import projects_en from '../data/projects_en.json'
-import projects_es from '../data/projects_es.json'
+import projects_de from '../../data/projects_de.json'
+import projects_en from '../../data/projects_en.json'
+import projects_es from '../../data/projects_es.json'
 
 
 
