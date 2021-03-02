@@ -10,7 +10,7 @@ import projects_es from '../../data/projects_es.json'
 
 
 const Project = () => {
-  const { t } = useTranslation('common')
+  const { t,i18n } = useTranslation('common')
   const router = useRouter()
   const { pid } = router.query
 
