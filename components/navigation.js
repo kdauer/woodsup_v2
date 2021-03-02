@@ -6,11 +6,11 @@ import styles from '../styles/header.module.sass'
 const Navigation = () => {
   const { t,i18n} = useTranslation('common')
 
-  console.log(i18n)
-  // const changeLang = (event) => {
-	// 	i18n.changeLanguage(event.target.value);
-	// };
+  // console.log(i18n.language)
 
+  const changeLang = (event) => {
+    i18n.changeLanguage(event.currentTarget.value)
+  }
   return (
     <div className={styles.navImg}>
     <h1 className={styles.logo}>
@@ -20,7 +20,7 @@ const Navigation = () => {
     </h1>
     <NavBar />
     <div className={styles.langContainer}>
-    <select name="language" id="language"  selected>
+    <select  name="language" id="language" onChange={changeLang} selected>
       <option value="de">🇩🇪</option>
       <option value="en">🇬🇧</option>
       <option value="es">🇪🇸</option>

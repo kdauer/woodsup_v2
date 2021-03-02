@@ -6,7 +6,7 @@ import styles from '../styles/home.module.sass'
 import News from '../components/news'
 
 const Homepage = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('common','news')
 
   console.log("WoodsUp e.v. - from Potsdam with ❤");
   return (
@@ -47,7 +47,7 @@ const Homepage = () => {
 )}
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common']),
+    ...await serverSideTranslations(locale, ['common','news']),
   },
 })
 export default Homepage
