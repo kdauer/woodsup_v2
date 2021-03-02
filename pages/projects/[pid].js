@@ -26,12 +26,12 @@ const Project = () => {
     projectsList = projects_es.projects;
   }
   const project = projectsList.find(el => {
-    // console.log(el)
+    console.log(el)
   return el.id === pid;
   });
-  const images = project.gallery;
+  // const images = project.gallery;
   const presslinks = project.presslinks;
-// console.log(project.id)
+console.log(project.id)
     if (!project) {
         return <div>Loading</div>;
       } else 
@@ -51,7 +51,7 @@ const Project = () => {
           ) : (
             <div></div>
           )}
-          {images ? (
+          {/* {images ? (
           <Carousel className="carousel-custom">
           {images.map((image) => (
             <Carousel.Item key={image}>
@@ -62,7 +62,7 @@ const Project = () => {
                 />
             </Carousel.Item>
             ))}
-            </Carousel>):(<div></div>)}
+            </Carousel>):(<div></div>)} */}
           {presslinks ? (
             <ul>  
             <h5>Für Presseartikel</h5>
