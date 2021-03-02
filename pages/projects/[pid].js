@@ -30,7 +30,7 @@ const Project = () => {
   return el.id === pid;
   });
   // const images = project.gallery;
-  const presslinks = project.presslinks;
+  // const presslinks = project.presslinks;
 console.log(project.id)
     if (!project) {
         return <div>Loading</div>;
@@ -63,7 +63,7 @@ console.log(project.id)
             </Carousel.Item>
             ))}
             </Carousel>):(<div></div>)} */}
-          {presslinks ? (
+          {/* {presslinks ? (
             <ul>  
             <h5>Für Presseartikel</h5>
             {presslinks.map((link) =>(
@@ -72,7 +72,7 @@ console.log(project.id)
             </ul>
           ) : (
             <p></p>
-          )}
+          )} */}
         </div>
       );
 }
