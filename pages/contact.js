@@ -2,7 +2,7 @@
 const Contact = () => {
     return (
         <div>
-      <h3>WoodsUp e.V.</h3>
+      <h3>Woods Up e.V.</h3>
       <p>
         Wollestraße 52
         <br />

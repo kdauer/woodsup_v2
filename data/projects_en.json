@@ -7,7 +7,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"2",
@@ -16,7 +16,7 @@
             "content":"Planting of three giant sequoia trees in front of the Brandenburg State Parliament in Potsdam as a practical measure for climate protection",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":["/images/landtag/giesen1.jpg","/images/landtag/P1090274.JPG"]
         },
         {
             "id":"3",
@@ -25,7 +25,7 @@
             "content":"on August 10, 2019 bike tour with tree planting action in Potsdam, Brandenburg and Krielow in cooperation with Extinction Rebellion and Fridays for Future.",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":["/images/radtour/67813342_470544643525649_3099070275614932992_o.jpg","/images/radtour/68343072_470510526862394_5543892864544538624_o.jpg","/images/radtour/68394535_470544466859000_2028577100453117952_o.jpg","/images/radtour/branne-baum.jpg","/images/radtour/photo_2019-08-10_14-35-53.jpg","/images/radtour/photo_2019-08-10_14-36-24.jpg","/images/radtour/potsdam-baum.jpg"]
         },
         {
             "id":"4",
@@ -34,7 +34,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"5",
@@ -43,7 +43,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":["/images/goemnigk/81111649_725496244525888_5537632979775389696_o.jpg","/images/goemnigk/photo_2019-12-14_20-51-32.jpg","/images/goemnigk/photo_2019-12-14_20-52-23.jpg"]
         },
         {
             "id":"6",
@@ -52,7 +52,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":["/images/rio_mira/photo_2019-11-24_22-42-24.jpg","/images/rio_mira/photo_2020-02-12_13-23-12.jpg","/images/rio_mira/photo_2020-02-12_13-23-33.jpg"]
         },
         {
             "id":"7",
@@ -61,7 +61,7 @@
             "content":"",
             "video":"https://www.youtube.com/embed/9uYkBS9e6p4",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"8",
@@ -70,7 +70,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
         },
         {
             "id":"9",
@@ -79,7 +79,7 @@
             "content":"",
             "video":"",
             "presslinks":"",
-            "gallery":""
+            "gallery":[]
             }
         ]
 }
