@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
-import projects from '../../data/projects_de.json'
+// import projects from '../../data/projects_de.json'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 const projectsList = projects.projects;
