@@ -39,11 +39,9 @@ const Support = () => {
     </div>
     )
 }
-
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...await serverSideTranslations(locale, ['common']),
-  }
+  },
 })
-
 export default Support

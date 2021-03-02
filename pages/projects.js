@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import styles from '../styles/projects.module.sass'
-import projects_de from '../data/projects_de.json'
-import { withTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import projects_de from '../data/projects_de.json'
 import projects_en from '../data/projects_en.json'
 import projects_es from '../data/projects_es.json'
 
 
 
 
-const Projects = ({t,props,i18n}) => {
+const Projects = () => {
+  const { t,i18n } = useTranslation('common')
 
   let projectsList = projects_de.projects
   
@@ -57,11 +58,9 @@ const Projects = ({t,props,i18n}) => {
   </div>
 )
 }
-
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...await serverSideTranslations(locale, ['common']),
   }
 })
-
-export default withTranslation('common')(Projects)
+export default Projects

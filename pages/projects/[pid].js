@@ -1,12 +1,13 @@
 import { useRouter } from 'next/router'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
 import projects from '../../data/projects_de.json'
-
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 const projectsList = projects.projects;
 
 const Project = () => {
+  const { t } = useTranslation('common')
   const router = useRouter()
   const { pid } = router.query
   const project = projectsList.find(el => {
@@ -60,6 +61,11 @@ console.log(project.id)
         </div>
       );
 }
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+})
 export async function getStaticPaths() {
   return {
     // Only `/posts/1` and `/posts/2` are generated at build time
@@ -79,11 +85,6 @@ export async function getStaticPaths() {
   }
 }
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...await serverSideTranslations(locale, ['common']),
-  }
-})
 
 
 

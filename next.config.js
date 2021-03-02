@@ -1,21 +1,5 @@
+const { i18n } = require('./next-i18next.config')
 
 module.exports = {
-    i18n: {
-      locales: ['de', 'en', 'es'],
-      defaultLocale: 'de',
-    },
-    domains: [
-      {
-        domain: 'woodsup.org',
-        defaultLocale: 'de',
-      },
-      {
-        domain: 'woodsup.en',
-        defaultLocale: 'en',
-      },
-      {
-        domain: 'woddsup.es',
-        defaultLocale: 'es',
-      },
-    ],
-  }
+i18n,
+}

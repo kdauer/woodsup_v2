@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '../styles/imprint.module.sass'
 
 const Imprint = () => {
-  const { t } = useTranslation('legalnotice')
+  const { t } = useTranslation('common')
 
     return (
 <div className={styles.impress}>
@@ -29,11 +29,9 @@ const Imprint = () => {
     </div>
     )
 }
-
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['legalnotice']),
-  }
+    ...await serverSideTranslations(locale, ['common']),
+  },
 })
-
 export default Imprint
