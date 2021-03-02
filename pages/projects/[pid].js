@@ -1,15 +1,30 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/projectdetail.module.sass'
 import Carousel from 'react-bootstrap/Carousel'
-// import projects from '../../data/projects_de.json'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-const projectsList = projects.projects;
+import projects_de from '../data/projects_de.json'
+import projects_en from '../data/projects_en.json'
+import projects_es from '../data/projects_es.json'
+
+
 
 const Project = () => {
   const { t } = useTranslation('common')
   const router = useRouter()
   const { pid } = router.query
+
+  let projectsList = projects_de.projects
+  
+  if (i18n.language === 'de') {
+    projectsList = projects_de.projects;
+  }
+  if (i18n.language === 'en') {
+    projectsList = projects_en.projects;
+  }
+  if (i18n.language === 'es') {
+    projectsList = projects_es.projects;
+  }
   const project = projectsList.find(el => {
     // console.log(el)
   return el.id === pid;
