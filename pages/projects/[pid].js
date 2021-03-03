@@ -10,12 +10,12 @@ import projects_es from '../../data/projects_es.json'
 
 
 const Project = () => {
-  const { t,i18n } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
   const router = useRouter()
   const { pid } = router.query
 
   let projectsList = projects_de.projects
-  
+
   if (i18n.language === 'de') {
     projectsList = projects_de.projects;
   }
@@ -26,32 +26,32 @@ const Project = () => {
     projectsList = projects_es.projects;
   }
   const project = projectsList.find(el => {
-    console.log(el)
-  return el.id === pid;
+    // console.log(el)
+    return el.id === pid;
   });
   // const images = project.gallery;
   // const presslinks = project.presslinks;
-console.log(project.id)
-    if (!project) {
-        return <div>Loading</div>;
-      } else 
-      return (
-        <div className={styles.detail_container}>
-          <h2>{project.title}</h2>
-          {project.image ? (
-            <img src={project.image} alt={project.title} />
-          ) : (
+  console.log(project.id)
+  if (!project) {
+    return <div>Loading</div>;
+  } else
+    return (
+      <div className={styles.detail_container}>
+        <h2>{project.title}</h2>
+        {project.image ? (
+          <img src={project.image} alt={project.title} />
+        ) : (
             <div></div>
           )}
-          <p>{project.content}</p>
-          {project.video ? (
-            <div className={styles.player}>
-            <iframe  width="560" height="315" src={project.video} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
-          ) : (
+        <p>{project.content}</p>
+        {project.video ? (
+          <div className={styles.player}>
+            <iframe width="560" height="315" src={project.video} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        ) : (
             <div></div>
           )}
-          {/* {images ? (
+        {/* {images ? (
           <Carousel className="carousel-custom">
           {images.map((image) => (
             <Carousel.Item key={image}>
@@ -63,7 +63,7 @@ console.log(project.id)
             </Carousel.Item>
             ))}
             </Carousel>):(<div></div>)} */}
-          {/* {presslinks ? (
+        {/* {presslinks ? (
             <ul>  
             <h5>Für Presseartikel</h5>
             {presslinks.map((link) =>(
@@ -73,8 +73,8 @@ console.log(project.id)
           ) : (
             <p></p>
           )} */}
-        </div>
-      );
+      </div>
+    );
 }
 export const getStaticProps = async ({ locale }) => ({
   props: {
