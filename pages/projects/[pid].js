@@ -31,7 +31,7 @@ const Project = () => {
   });
   // const images = project.gallery;
   // const presslinks = project.presslinks;
-  console.log(project.id)
+  // console.log(project.id)
   if (!project) {
     return <div>Loading</div>;
   } else
