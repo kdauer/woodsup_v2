@@ -29,7 +29,7 @@ const Project = () => {
     // console.log(el)
     return el.id === pid;
   });
-  // const images = project.gallery;
+  const images = project.gallery;
   // const presslinks = project.presslinks;
   // console.log(project.id)
   if (!project) {
@@ -51,7 +51,7 @@ const Project = () => {
         ) : (
             <div></div>
           )}
-        {/* {images ? (
+        {images ? (
           <Carousel className="carousel-custom">
           {images.map((image) => (
             <Carousel.Item key={image}>
@@ -62,7 +62,7 @@ const Project = () => {
                 />
             </Carousel.Item>
             ))}
-            </Carousel>):(<div></div>)} */}
+            </Carousel>):(<div></div>)}
         {/* {presslinks ? (
             <ul>  
             <h5>Für Presseartikel</h5>
@@ -76,11 +76,7 @@ const Project = () => {
       </div>
     );
 }
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...await serverSideTranslations(locale, ['common']),
-  },
-})
+
 export async function getStaticPaths() {
   return {
     // Only `/posts/1` and `/posts/2` are generated at build time
@@ -96,11 +92,14 @@ export async function getStaticPaths() {
      { params: { pid: '9' } }],
     // Enable statically generating additional pages
     // For example: `/posts/3`
-    fallback: true,
+    fallback: false,
   }
 }
 
-
-
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+})
 
 export default Project
